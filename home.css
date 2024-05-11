@@ -1,0 +1,119 @@
+@font-face {
+    font-family: inter-bold;
+    src: url(Inter-Bold.ttf);
+}
+
+@font-face {
+    font-family: inter-semibold;
+    src: url(Inter-SemiBold.ttf);
+}
+
+h1 {
+    font-family: inter-bold;
+}
+
+body {
+    background: rgb(29, 29, 29);
+    color: white;
+}
+
+.button {
+   text-align: center;
+    border-radius: 20px;
+   height: 100px;
+   width: 250px;
+   font-size: 25px;
+   font-family: inter-semibold;
+   color: white;
+   background-color: rgb(29, 29, 29);
+   border-color: white;
+   border-width: 0.5px;
+   box-shadow: none;
+   outline: none;
+   border-style: solid;
+   cursor: pointer;
+   transition: 0.3s;
+   margin: 5px;
+}
+
+button:hover {
+    background-color: rgba(116, 116, 116, 0.671);
+    scale: 105%;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.big-button {
+    text-align: center;
+    border-radius: 30px;
+   height: 300px;
+   width: 505px;
+   font-size: 25px;
+   font-family: inter-semibold;
+   color: white;
+   background-color: rgb(29, 29, 29);
+   border-color: white;
+   border-width: 0.5px;
+   box-shadow: none;
+   outline: none;
+   border-style: solid;
+   cursor: pointer;
+   transition: 0.3s;
+   margin: 10px;
+}
+
+.center-logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.top-bar {
+    scale: 50%;
+    margin-left: -120px;
+    margin-top: -45px;
+    padding: 0%;
+    margin-right: 30px;
+    height: 40px;
+}
+
+li {
+    display: inline;
+    float: left;
+    height: 50px;
+}
+
+li a {
+    display: block;
+    padding: 8px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+    transition: 0.5s;
+    height: 40px;
+}
+
+li a:hover {
+    background-color: rgb(56, 56, 56);
+}
+
+ul {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-radius: 10px;
+    height: 40px;
+}
+
+.active {
+    background-color: dodgerblue;
+}
+
+.right {
+    float: right;
+}
