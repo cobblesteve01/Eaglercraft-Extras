@@ -9,7 +9,7 @@ It is a solo developed project for now, and I will try to update it every other 
 - Look at a <b>giant</b> selection of clients to play on!
 - Download skins for Eaglercraft!
 
-## Meet the Developer
+## Meet the Developers
 
 ### Hey there! I'm cobblesteve.
 I started this project in April, and I wanted it to become the alternative for EaglerCrack.
@@ -23,3 +23,10 @@ Here are some things about me:
 - Likes to play Minecraft, Geometry Dash, A Dance of Fire and Ice (ADOFAI), and more!
 - yea :D
 
+### Hey there! I'm SyntaxError52.
+
+Here are some things about me:
+- Knows HTML, CSS, and Python
+- Learning JavaScript
+- Barely knows JavaScript
+- yea :D
