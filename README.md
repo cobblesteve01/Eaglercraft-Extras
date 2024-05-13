@@ -15,7 +15,7 @@ It is a solo developed project for now, and I will try to update it every other 
 I started this project in April, and I wanted it to become the alternative for EaglerCrack.
 I'm making it for a website I have right now, which currently uses EaglerCrack as a source.
 
-Here are some things about me:
+About Me:
 - Knows HTML and CSS
 - Learning JavaScript and Python
 - Barely knows Python
