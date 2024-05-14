@@ -8,6 +8,11 @@
     src: url(Inter-SemiBold.ttf);
 }
 
+@font-face {
+    font-family: inter-medium;
+    src: url(Inter-Medium.ttf);
+}
+
 h1 {
     font-family: inter-bold;
 }
@@ -73,17 +78,12 @@ button:hover {
 
 .top-bar {
     scale: 50%;
-    margin-left: -120px;
-    margin-top: -45px;
     padding: 0%;
-    margin-right: 30px;
-    height: 40px;
 }
 
 li {
     display: inline;
     float: left;
-    height: 50px;
 }
 
 li a {
@@ -94,11 +94,15 @@ li a {
     text-align: center;
     font-size: 20px;
     transition: 0.5s;
-    height: 40px;
+    margin-left: 2px;
+    margin-right: 2px;
+    font-family: inter-medium;
 }
 
 li a:hover {
     background-color: rgb(56, 56, 56);
+    border-radius: 10px;
+
 }
 
 ul {
@@ -107,13 +111,61 @@ ul {
     padding: 0;
     overflow: hidden;
     border-radius: 10px;
-    height: 40px;
+    padding-top: 5px;
 }
 
 .active {
     background-color: dodgerblue;
+    border-radius: 10px;
 }
 
 .right {
     float: right;
+}
+
+.innerbutton {
+    text-align: center;
+    border-radius: 20px;
+    height: 75px;
+    width: 200px;
+    font-size: 14px;
+    font-family: inter-semibold;
+    color: white;
+    background-color: rgb(26, 26, 26);
+    border-color: white;
+    border-width: 0.5px;
+    box-shadow: none;
+    outline: none;
+    border-style: solid;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.material-icons-round {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 2;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+    vertical-align: -2.5px;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
 }
