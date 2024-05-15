@@ -1,379 +1,328 @@
-<html><head>
+<!DOCTYPE html>
+<html>
+<head>
 
 
-    <title>Untitled document - Google Docs</title>
-    <meta charset="UTF-8">
-    
-    <link href="jquery-ui/jquery-ui.css" rel="stylesheet">
-    <script src="jquery-ui/external/jquery/jquery.js"></script>
-    <script src="jquery-ui/jquery-ui.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.js"></script>
-    
-    
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta property="og:url" content="https://koneseaglerserver.ga/">
-    <link rel="icon" type="image/png" href="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="kone client is a custom version of EaglercraftX which is real Minecraft 1.8.8 that you can play in your browser. You can join real Minecraft 1.8.8 servers if it has a special version of this thing called Bungeecord.">
-    <meta name="keywords" content="minecraft, applet, chromebook, lax1dude, games, eaglercraft, eagler">
-    <meta name="author" content="LAX1DUDE">
-    <meta property="og:title" content="kone client">
-    <meta property="og:locale" content="en-US">
-    <meta property="og:type" content="website">
-    <meta property="og:description" content="kone client is a custom version of EaglercraftX which is real Minecraft 1.8.8 that you can play in your browser. You can join real Minecraft 1.8.8 servers if it has a special version of this thing called Bungeecord.">
-    <meta property="og:image" content="https://i.imgur.com/gfqQgwu.png">
-    
-    <script>
-    
-        document.addEventListener("click", ()=> {
-            keyPressed = true;
-            hideScreenEnabled();
-        });
-    
-        document.addEventListener("keydown", ()=> {
-            keyPressed = true;
-            hideScreenEnabled();
-        });
-    
-        function percentage(num, per)
-        {
-              return (num/100)*per;
-        }
-        function editDownloadPercent(firstDivide, secondDivide){
-            //console.log(firstDivide+"/"+secondDivide);
-            //console.log((firstDivide/secondDivide)*100+"%");
-            let percent = (((firstDivide.loaded)/secondDivide)*100+"%").slice(0, 5);
-    
-            let MBSize = Math.round((secondDivide/1024)/1024);
-            let MBLoaded = Math.round((firstDivide.loaded/1024)/1024);
-    
-            //console.log(MBLoaded);
-    
-            if (document.getElementById("loadDiv") == undefined){
-                console.warn("The load screen is gone!");
-            }
-            else{
-                if (document.getElementById("downloadPercent") == undefined){
-                    let percentElem = document.createElement("h3");
-                    percentElem.innerText = "Downloading Assets: "+percent+"% ("+MBLoaded+"MB"+" / "+MBSize+"MB)";
-                    percentElem.id = "downloadPercent";
-                    percentElem.style.fontFamily = "Torus";
-                    percentElem.style.position = "absolute";
-                    percentElem.style.top = "72vh";
-                    percentElem.style.left = "50vw";
-                    percentElem.style.transform = "translate(-50%)";
-                    document.getElementById("loadDiv").appendChild(percentElem);
-                    document.getElementById("loadBarInside").style.transition = "width 0.2s linear";
-                    document.getElementById("loadBarInside").style.width = percentage(80.1,((firstDivide.loaded)/secondDivide)*100) + "vw";
-                }
-                else{
-                    document.getElementById("downloadPercent").innerText = "Downloading Assets: "+percent+"% ("+MBLoaded+"MB"+" / "+MBSize+"MB)";
-                    document.getElementById("loadBarInside").style.transition = "width 0.2s linear";
-                    document.getElementById("loadBarInside").style.width = percentage(80.1,((firstDivide.loaded)/secondDivide)*100) + "vw";
-                }
-    
-            }
-    
-    
-            
-        }
-    
-        
-    
-        var keyPressed = false;
-        let screenAudioEnableShown = false;
-    
-        function screenAudioEnable(){
-            document.getElementById("downloadPercent").style.transition = "opacity 0.2s";
-            document.getElementById("downloadPercent").style.opacity = "0";
-            setTimeout(()=> { document.getElementById("downloadPercent").style.display = "none"; }, 200);
-            if (!keyPressed){
-                console.log("screenAudioEnable");
-                screenAudioEnableShown = true;
-                document.querySelector("#loadDiv > img").style.transition = "all 0.5s";
-                document.querySelector("#loadDiv > img").style.width = "58vw";
-                document.querySelector("#loadDiv > img").style.top = "23vh";
-                let enableaudio = document.createElement("h2");
-                enableaudio.innerText = "Click anywhere or press any key to start the game!";
-                enableaudio.id = "EnableAudioText";
-                enableaudio.style.fontFamily = "Torus";
-                enableaudio.style.position = "absolute";
-                enableaudio.style.top = "50vh";
-                enableaudio.style.left = "50vw";
-                enableaudio.style.transform = "translate(-50%, -50%)";
-                enableaudio.style.opacity = "0";
-                enableaudio.style.transition = "opacity 0.2s";
-                document.getElementById("loadDiv").appendChild(enableaudio);
-                setTimeout(()=>{
-                    enableaudio.style.opacity = "1";
-                }, 50);
-            }
-            
-        }
-        
-        function hideScreenEnabled(){
-            if (screenAudioEnableShown){
-                screenAudioEnableShown = false;
-                document.getElementById("EnableAudioText").style.opacity = "0";
-                document.querySelector("#loadDiv > img").style.width = "50vw";
-                document.querySelector("#loadDiv > img").style.top = "43vh";
-    
-                let loadingMC = document.createElement("h3");
-                loadingMC.innerText = "Loading kone Client 1.8.8...";
-                loadingMC.id = "loadingMCText";
-                loadingMC.style.fontFamily = "Torus";
-                loadingMC.style.position = "absolute";
-                loadingMC.style.top = "72vh";
-                loadingMC.style.left = "50vw";
-                loadingMC.style.transform = "translate(-50%)";
-                loadingMC.style.opacity = "0";
-                loadingMC.style.transition = "opacity 0.2s";
-                document.getElementById("loadDiv").appendChild(loadingMC);
-                setTimeout(()=>{
-                    loadingMC.style.opacity = "1";
-                }, 50);
-                
-                
-            }
-    
-            
-                
-            
-        }
-    
-        function mojangScreen(){
-            //console.warn("mojangScreen");
-            document.querySelector("#loadDiv > img").style.opacity = "0";
-            document.getElementById("loadDiv").style.transition = "all 0.2s";
-            document.getElementById("loadDiv").style.backgroundColor = "#f0323e";
-            try {
-                document.querySelector("#loadingMCText").style.transition = "all 0.2s";
-                document.querySelector("#loadingMCText").style.color = "white";
-            }
-            catch (e) {
-                console.warn("Loading MCText isn't there!");
-            }
-            let mojangLogo = document.createElement("img");
-            mojangLogo.src = "./Mojang-logo.jpg";
-            mojangLogo.id = "Mojang-logo";
-            mojangLogo.style.top = "34vh";
-            mojangLogo.style.left = "50vw";
-            mojangLogo.style.position = "absolute";
-            mojangLogo.style.width = "50vw";
-            mojangLogo.style.transform = "translate(-50%)";
-            mojangLogo.style.opacity = "0";
-            mojangLogo.style.transition = "opacity 0.2s";
-            mojangLogo.style.userSelect = "none";
-            document.getElementById("loadDiv").appendChild(mojangLogo);
-            mojangLogo.style.opacity = "1";
-        }
-    
-        function changeToCanvas() {
-            try {
-                document.querySelector("#loadingMCText").style.transition = "all 0.2s";
-                document.querySelector("#loadingMCText").style.opacity = "0";
-            }
-            catch (e) {
-                console.warn("Loading MCText isn't there!");
-            }
-            document.getElementById("Mojang-logo").style.transition = "all 0.7s";
-            document.getElementById("Mojang-logo").style.width = "200vw";
-            document.getElementById("Mojang-logo").style.top = "5vh";
-            setTimeout(()=>{
-                document.getElementById("loadDiv").style.transition = "opacity 0.1s";
-                document.getElementById("loadDiv").style.opacity = "0";
-                setTimeout(()=>{
-                    document.getElementById("loadDiv").style.display = "none";
-                }, 100);
-            },200);
-        }
-    
-        function keyPressedFunc(){
-            //console.log(keyPressed);
-            //console.log(!keyPressed);
-            return keyPressed;
-        }
-    </script>
-    
-    <link href="index.css" rel="stylesheet">
-    
-    <script type="text/javascript" src="classes.js"></script>
-    
-    
-    
-    <script src="index.js"></script>
-            <script type="text/javascript">
-                "use strict";
-                window.addEventListener("load", () => {
-                    if(document.location.href.startsWith("file:")) {
-                        alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
-                    }else {
-                        window.eaglercraftXOpts = {
-                            container: "game_frame",
-                            assetsURI: "assets.epk",
-                            localesURI: "lang/",
-                            servers: [
-                                { name: "Lifesteal SMP", addr: "wss://lifesteal.matthewkrupenya.repl.co/server"},
-                                { name: "ArchMC", addr: "wss://mc.arch.lol"}
-                            ]
-                        };
-                        
-                        var q = window.location.search;
-                        if(typeof q === "string" && q.startsWith("?")) {
-                            q = new URLSearchParams(q);
-                            var s = q.get("server");
-                            if(s) window.eaglercraftXOpts.joinServer = s;
-                        }
-                        
-                        main();
-                    }
-                });
-            </script>
-        </head>
-    
-        <body style="margin:0px; background-color: black;">
-    
-    <div style="margin:0px;width:100vw;height:100vh;position:relative;" id="game_frame">
-    <canvas width="674" height="910" style="width: 100%; height: 100%; image-rendering: pixelated;"></canvas><img style="z-index:999;position:absolute;top:10px;left:calc(50% - 155px); width:310px;" src="./koneClientHd.png"><div style="z-index:999;position:absolute;top:135px;left:10%;right:10%;bottom:50px;background-color:white;border:1px solid #cccccc;overflow-x:hidden;overflow-y:scroll;overflow-wrap:break-word;white-space:pre-wrap;font: 14px monospace;padding:10px;">Game Crashed! I have fallen and I can't get up!
-    
-    Native Browser Exception
-    ----------------------------------
-      Line: https://exquisite-pavlova-2fd33d.netlify.app/clients/1.8/koneclient/classes.js:10:390
-      Type: Error
-      Desc: Java exception thrown
-    ----------------------------------
-    
-    Error: Java exception thrown
-        at $rt_exception (https://exquisite-pavlova-2fd33d.netlify.app/clients/1.8/koneclient/classes.js:10:390)
-        at $rt_throw (https://exquisite-pavlova-2fd33d.netlify.app/clients/1.8/koneclient/classes.js:10:218)
-        at Qi (https://exquisite-pavlova-2fd33d.netlify.app/clients/1.8/koneclient/classes.js:4496:40)
-        at Ev (https://exquisite-pavlova-2fd33d.netlify.app/clients/1.8/koneclient/classes.js:4497:23)
-        at A.Op (https://exquisite-pavlova-2fd33d.netlify.app/clients/1.8/koneclient/classes.js:5874:130)
-        at A.AXr (https://exquisite-pavlova-2fd33d.netlify.app/clients/1.8/koneclient/classes.js:5875:136)
-        at $rt_array.toString (https://exquisite-pavlova-2fd33d.netlify.app/clients/1.8/koneclient/classes.js:30580:226)
-    
-    
-    eaglercraft.version = "22w54a"
-    eaglercraft.minecraft = "1.8.8"
-    eaglercraft.brand = "kone"
-    eaglercraft.username = "YeerVool166"
-    
-    webgl.version = WebGL 2.0 (OpenGL ES 3.0 Chromium)
-    webgl.renderer = ANGLE (AMD, AMD Radeon RX 5700 (0x0000731F) Direct3D11 vs_5_0 ps_5_0, D3D11)
-    webgl.vendor = Google Inc. (AMD)
-    
-    window.eaglercraftXOpts = {"container":"game_frame","assetsURI":"assets.epk","localesURI":"lang/","servers":[{"name":"Lifesteal SMP","addr":"wss://lifesteal.matthewkrupenya.repl.co/server"},{"name":"ArchMC","addr":"wss://mc.arch.lol"}]}
-    
-    window.navigator.userAgent = Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/125.0.0.0 Safari/537.36
-    window.navigator.vendor = Google Inc.
-    window.navigator.language = en-US
-    window.navigator.hardwareConcurrency = 16
-    window.navigator.deviceMemory = 8
-    window.navigator.platform = Win32
-    window.navigator.product = Gecko
-    
-    rootElement.clientWidth = 674
-    rootElement.clientHeight = 910
-    window.innerWidth = 674
-    window.innerHeight = 910
-    window.outerWidth = 1289
-    window.outerHeight = 1039
-    window.devicePixelRatio = 1
-    window.screen.availWidth = 2560
-    window.screen.availHeight = 1032
-    window.screen.colorDepth = 24
-    window.screen.pixelDepth = 24
-    
-    window.currentContext = undefined
-    
-    window.location.href = https://exquisite-pavlova-2fd33d.netlify.app/clients/1.8/koneclient/
-    
-    </div></div>
-    
-        <div id="available" style="display:none;">
-            
-            <img id="fakedoc" src="docs.png" width="100%" height="56.25%">
-        </div>
-        
-        <div id="koneclientmenu" style="display:none;width:100vw;height:100vh;">
-    
-    
-    
-            <div id="koneclienttextboxtitle1">
-                <h1 id="koneclienttextboxtitle1_text" style="font-family: Arial; font-weight: bold;">kone client Menu</h1>
-                <h1 id="koneclienttextboxtitle1_text" style="font-family: Arial; font-weight: bold;">kone client Beta Feature, Work in Progress</h1>
-                <br>
-            </div>
-            <div id="koneclientmenubuttons">
-                <button id="modsbutton_button" width="100"><img id="modsbutton" src="modsbutton.png" width="100vw"></button>
-            </div>
-    
-    
-    
-            
-            
-    
-            
-            
-    
-            </div>
-    
-            <div id="preload_assets">
-                <img src="modsbutton.png">
-                <img src="modsbutton2.png">
-                <img src="Mojang-logo.jpg">
-            </div>
-            
-    
-    
-        
-        
-        
-    
-    
-    
-    <div tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-dialog-buttons ui-draggable ui-resizable" aria-describedby="CloseWithoutSave" aria-labelledby="ui-id-1" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-1" class="ui-dialog-title">Close Without Saving?</span><button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span class="ui-button-icon-space"> </span>Close</button></div><div id="CloseWithoutSave" class="ui-dialog-content ui-widget-content">
-                <p>All of the modifications you made will not be saved on the next reload. Are you sure you want to close without saving?</p>
-            </div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-corner-all ui-widget">Save</button><button type="button" class="ui-button ui-corner-all ui-widget">Dont Save</button><button type="button" class="ui-button ui-corner-all ui-widget">Cancel</button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-dialog-buttons ui-draggable ui-resizable" aria-describedby="FeatureInBetaError" aria-labelledby="ui-id-2" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-2" class="ui-dialog-title">This Feature is in beta.</span><button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span class="ui-button-icon-space"> </span>Close</button></div><div id="FeatureInBetaError" class="ui-dialog-content ui-widget-content">
-                <p>Unfortunatly, this feature has not been developed yet. This feature is still in beta and will not be accessible to the public until this feature is perfected, Check back later!</p>
-            </div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-corner-all ui-widget">Ok</button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div><div tabindex="-1" role="dialog" class="ui-dialog ui-corner-all ui-widget ui-widget-content ui-front ui-dialog-buttons ui-draggable" aria-describedby="dialog-confirm" aria-labelledby="ui-id-3" style="display: none;"><div class="ui-dialog-titlebar ui-corner-all ui-widget-header ui-helper-clearfix ui-draggable-handle"><span id="ui-id-3" class="ui-dialog-title">kone client Mods</span><button type="button" class="ui-button ui-corner-all ui-widget ui-button-icon-only ui-dialog-titlebar-close" title="Close"><span class="ui-button-icon ui-icon ui-icon-closethick"></span><span class="ui-button-icon-space"> </span>Close</button></div><div id="dialog-confirm" class="ui-dialog-content ui-widget-content">
-                <div id="modspage">
-                <div id="fakedocmod">
-                    <div id="modpreview">
-                        <img id="modpreviewdocs" src="docsmodsicon.png">
-                    </div>
-                    <hr>
-                    <div id="mod_description">
-                        <h3>Fake Google Docs Switch</h3>
-                        <p>Switch to a screenshot of google docs with a click of a button ;)</p>
-                    </div>
-                    <hr>
-                    <div id="modbuttons_on_off_set">
-                        <label class="switch">
-                        <input id="mod_slider_round_check" type="checkbox">
-                          <span class="mod_slider_round"><p id="slidertext">ON</p></span>
-                    </label>
-                        <br>
-                        <button id="mod_settings_button" style="vertical-align:middle" onclick="fakedocsetpage();"><span>Mod Settings </span></button>
-                    </div>
-                    
-                </div>
-    
-                </div>
-    
-                <div id="fakedocsetpage" style="display: none;">
-    
-                    <button id="backtomodpage" onclick="backtomodpage();">Back</button>
-                    <p id="keybindfakedoc">Current Keybind: </p>
-                    <div id="newkeybindfakedoc"><p id="fakedockeybindvalue">undefined</p></div>
-                    <br>
-                    <p id="keyboardlockmessage" style="opacity:0;">Please press any key, mouse buttons will not work.</p>
-                    <br>
-                    <h3>Preview of docs screenshot</h3>
-                    <img id="fakedocPreview" src="docs.png" width="550">
-                    <br>
-                    <button id="ChangeScreenshotfakedoc">Change Screenshot...</button>
-                </div>
-    
-            </div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-corner-all ui-widget">Load Config</button><button type="button" class="ui-button ui-corner-all ui-widget">Export Config</button><button type="button" class="ui-button ui-corner-all ui-widget">Save</button><button type="button" class="ui-button ui-corner-all ui-widget">Cancel</button></div></div></div><div style="z-index:100; width: 100vw; height: 100vh; position: absolute; top: 0px; left: 0px; background-color: white;" id="loadDiv"><img src="./koneClientHd.png" style="width:50vw; position:absolute; top: 43vh; left: 50vw; transform: translate(-50%, -50%);"><div style="width: 80vw; height: 25px; position: absolute; top: 80vh; left: 50vw; transform: translateX(-50%); background-color: white; border-radius: 25px; border: 5px solid black; display: none;"></div><div style="width: 0px; height: 35px; position: absolute; top: 80vh; left: 10vw; background-color: black; border-radius: 25px; transition: width 2s linear 0s; display: none;" id="loadBarInside"></div></div></body></html>
+<title>Untitled document - Google Docs</title>
+<meta charset="UTF-8" />
+
+<link href="jquery-ui/jquery-ui.css" rel="stylesheet">
+<script src="jquery-ui/external/jquery/jquery.js"></script>
+<script src="jquery-ui/jquery-ui.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@3.0.1/dist/js.cookie.js"></script>
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:url" content="https://koneseaglerserver.ga/" />
+<link rel="icon" type="image/png" href="https://ssl.gstatic.com/docs/documents/images/kix-favicon7.ico"/>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="kone client is a custom version of EaglercraftX which is real Minecraft 1.8.8 that you can play in your browser. You can join real Minecraft 1.8.8 servers if it has a special version of this thing called Bungeecord." />
+<meta name="keywords" content="minecraft, applet, chromebook, lax1dude, games, eaglercraft, eagler" />
+<meta name="author" content="LAX1DUDE" />
+<meta property="og:title" content="kone client" />
+<meta property="og:locale" content="en-US" />
+<meta property="og:type" content="website" />
+<meta property="og:description" content="kone client is a custom version of EaglercraftX which is real Minecraft 1.8.8 that you can play in your browser. You can join real Minecraft 1.8.8 servers if it has a special version of this thing called Bungeecord." />
+<meta property="og:image" content="https://i.imgur.com/gfqQgwu.png" />
+
+<script>
+
+	document.addEventListener("click", ()=> {
+		keyPressed = true;
+		hideScreenEnabled();
+	});
+
+	document.addEventListener("keydown", ()=> {
+		keyPressed = true;
+		hideScreenEnabled();
+	});
+
+	function percentage(num, per)
+	{
+  		return (num/100)*per;
+	}
+	function editDownloadPercent(firstDivide, secondDivide){
+		//console.log(firstDivide+"/"+secondDivide);
+		//console.log((firstDivide/secondDivide)*100+"%");
+		let percent = (((firstDivide.loaded)/secondDivide)*100+"%").slice(0, 5);
+
+		let MBSize = Math.round((secondDivide/1024)/1024);
+		let MBLoaded = Math.round((firstDivide.loaded/1024)/1024);
+
+		//console.log(MBLoaded);
+
+		if (document.getElementById("loadDiv") == undefined){
+			console.warn("The load screen is gone!");
+		}
+		else{
+			if (document.getElementById("downloadPercent") == undefined){
+				let percentElem = document.createElement("h3");
+				percentElem.innerText = "Downloading Assets: "+percent+"% ("+MBLoaded+"MB"+" / "+MBSize+"MB)";
+				percentElem.id = "downloadPercent";
+				percentElem.style.fontFamily = "Torus";
+				percentElem.style.position = "absolute";
+				percentElem.style.top = "72vh";
+				percentElem.style.left = "50vw";
+				percentElem.style.transform = "translate(-50%)";
+				document.getElementById("loadDiv").appendChild(percentElem);
+				document.getElementById("loadBarInside").style.transition = "width 0.2s linear";
+				document.getElementById("loadBarInside").style.width = percentage(80.1,((firstDivide.loaded)/secondDivide)*100) + "vw";
+			}
+			else{
+				document.getElementById("downloadPercent").innerText = "Downloading Assets: "+percent+"% ("+MBLoaded+"MB"+" / "+MBSize+"MB)";
+				document.getElementById("loadBarInside").style.transition = "width 0.2s linear";
+				document.getElementById("loadBarInside").style.width = percentage(80.1,((firstDivide.loaded)/secondDivide)*100) + "vw";
+			}
+
+		}
+
+
+		
+	}
+
+	
+
+	var keyPressed = false;
+	let screenAudioEnableShown = false;
+
+	function screenAudioEnable(){
+		document.getElementById("downloadPercent").style.transition = "opacity 0.2s";
+		document.getElementById("downloadPercent").style.opacity = "0";
+		setTimeout(()=> { document.getElementById("downloadPercent").style.display = "none"; }, 200);
+		if (!keyPressed){
+			console.log("screenAudioEnable");
+			screenAudioEnableShown = true;
+			document.querySelector("#loadDiv > img").style.transition = "all 0.5s";
+			document.querySelector("#loadDiv > img").style.width = "58vw";
+			document.querySelector("#loadDiv > img").style.top = "23vh";
+			let enableaudio = document.createElement("h2");
+			enableaudio.innerText = "Click anywhere or press any key to start the game!";
+			enableaudio.id = "EnableAudioText";
+			enableaudio.style.fontFamily = "Torus";
+			enableaudio.style.position = "absolute";
+			enableaudio.style.top = "50vh";
+			enableaudio.style.left = "50vw";
+			enableaudio.style.transform = "translate(-50%, -50%)";
+			enableaudio.style.opacity = "0";
+			enableaudio.style.transition = "opacity 0.2s";
+			document.getElementById("loadDiv").appendChild(enableaudio);
+			setTimeout(()=>{
+				enableaudio.style.opacity = "1";
+			}, 50);
+		}
+		
+	}
+	
+	function hideScreenEnabled(){
+		if (screenAudioEnableShown){
+			screenAudioEnableShown = false;
+			document.getElementById("EnableAudioText").style.opacity = "0";
+			document.querySelector("#loadDiv > img").style.width = "50vw";
+			document.querySelector("#loadDiv > img").style.top = "43vh";
+
+			let loadingMC = document.createElement("h3");
+			loadingMC.innerText = "Loading kone Client 1.8.8...";
+			loadingMC.id = "loadingMCText";
+			loadingMC.style.fontFamily = "Torus";
+			loadingMC.style.position = "absolute";
+			loadingMC.style.top = "72vh";
+			loadingMC.style.left = "50vw";
+			loadingMC.style.transform = "translate(-50%)";
+			loadingMC.style.opacity = "0";
+			loadingMC.style.transition = "opacity 0.2s";
+			document.getElementById("loadDiv").appendChild(loadingMC);
+			setTimeout(()=>{
+				loadingMC.style.opacity = "1";
+			}, 50);
+			
+			
+		}
+
+		
+			
+		
+	}
+
+	function mojangScreen(){
+		//console.warn("mojangScreen");
+		document.querySelector("#loadDiv > img").style.opacity = "0";
+		document.getElementById("loadDiv").style.transition = "all 0.2s";
+		document.getElementById("loadDiv").style.backgroundColor = "#f0323e";
+		try {
+			document.querySelector("#loadingMCText").style.transition = "all 0.2s";
+			document.querySelector("#loadingMCText").style.color = "white";
+		}
+		catch (e) {
+			console.warn("Loading MCText isn't there!");
+		}
+		let mojangLogo = document.createElement("img");
+		mojangLogo.src = "./Mojang-logo.jpg";
+		mojangLogo.id = "Mojang-logo";
+		mojangLogo.style.top = "34vh";
+		mojangLogo.style.left = "50vw";
+		mojangLogo.style.position = "absolute";
+		mojangLogo.style.width = "50vw";
+		mojangLogo.style.transform = "translate(-50%)";
+		mojangLogo.style.opacity = "0";
+		mojangLogo.style.transition = "opacity 0.2s";
+		mojangLogo.style.userSelect = "none";
+		document.getElementById("loadDiv").appendChild(mojangLogo);
+		mojangLogo.style.opacity = "1";
+	}
+
+	function changeToCanvas() {
+		try {
+			document.querySelector("#loadingMCText").style.transition = "all 0.2s";
+			document.querySelector("#loadingMCText").style.opacity = "0";
+		}
+		catch (e) {
+			console.warn("Loading MCText isn't there!");
+		}
+		document.getElementById("Mojang-logo").style.transition = "all 0.7s";
+		document.getElementById("Mojang-logo").style.width = "200vw";
+		document.getElementById("Mojang-logo").style.top = "5vh";
+		setTimeout(()=>{
+			document.getElementById("loadDiv").style.transition = "opacity 0.1s";
+			document.getElementById("loadDiv").style.opacity = "0";
+			setTimeout(()=>{
+				document.getElementById("loadDiv").style.display = "none";
+			}, 100);
+		},200);
+	}
+
+	function keyPressedFunc(){
+		//console.log(keyPressed);
+		//console.log(!keyPressed);
+		return keyPressed;
+	}
+</script>
+
+<link href="index.css" rel="stylesheet">
+
+<script type="text/javascript" src="classes.js"></script>
+
+
+
+<script src="index.js"></script>
+		<script type="text/javascript">
+			"use strict";
+			window.addEventListener("load", () => {
+				if(document.location.href.startsWith("file:")) {
+					alert("HTTP please, do not open this file locally, run a local HTTP server and load it via HTTP");
+				}else {
+					window.eaglercraftXOpts = {
+						container: "game_frame",
+						assetsURI: "assets.epk",
+						localesURI: "lang/",
+						servers: [
+							{ name: "koneMC", addr: "wss://konemc.ga/"},
+							{ name: "ayunboom", addr: "wss://sus.shhnowisnottheti.me/" },
+							{ name: "A*sPixel", addr: "wss://mc.asspixel.net/"},
+							{ name: "ArchMC", addr: "wss://mc.arch.lol"}
+						]
+					};
+					
+					var q = window.location.search;
+					if(typeof q === "string" && q.startsWith("?")) {
+						q = new URLSearchParams(q);
+						var s = q.get("server");
+						if(s) window.eaglercraftXOpts.joinServer = s;
+					}
+					
+					main();
+				}
+			});
+		</script>
+	</head>
+
+	<body style="margin:0px; background-color: black;">
+
+<div style="margin:0px;width:100vw;height:100vh;" id="game_frame">
+</div>
+
+	<div id="available" style="display:none;">
+		
+		<img id="fakedoc"src="docs.png" width="100%" height="56.25%">
+	</div>
+	
+	<div id="koneclientmenu" style="display:none;width:100vw;height:100vh;">
+
+
+
+		<div id="koneclienttextboxtitle1">
+			<h1 id="koneclienttextboxtitle1_text" style="font-family: Arial; font-weight: bold;">kone client Menu</h1>
+			<h1 id="koneclienttextboxtitle1_text" style="font-family: Arial; font-weight: bold;">kone client Beta Feature, Work in Progress</h1>
+			<br>
+		</div>
+		<div id="koneclientmenubuttons">
+			<button id="modsbutton_button"  width="100"><img id="modsbutton" src="modsbutton.png" width="100vw"></button>
+		</div>
+
+
+
+		
+		<div id="dialog-confirm" title="kone client Mods">
+			<div id="modspage">
+			<div id="fakedocmod">
+				<div id="modpreview">
+					<img id="modpreviewdocs"src="docsmodsicon.png">
+				</div>
+				<hr>
+				<div id="mod_description">
+					<h3>Fake Google Docs Switch</h3>
+					<p>Switch to a screenshot of google docs with a click of a button ;)</p>
+				</div>
+				<hr>
+				<div id="modbuttons_on_off_set">
+					<label class="switch">
+					<input id="mod_slider_round_check" type="checkbox">
+  					<span class="mod_slider_round"><p id="slidertext">OFF</p></span>
+				</label>
+					<br>
+					<button id="mod_settings_button" style="vertical-align:middle" onclick="fakedocsetpage();"><span>Mod Settings </span></button>
+				</div>
+				
+			</div>
+
+			</div>
+
+			<div id="fakedocsetpage" style="display: none;">
+
+				<button id="backtomodpage" onclick="backtomodpage();">Back</button>
+				<p id="keybindfakedoc">Current Keybind: </p>
+				<div id="newkeybindfakedoc"><p id="fakedockeybindvalue">Failed to fetch</p></div>
+				<br>
+				<p id="keyboardlockmessage" style="opacity:0;">Please press any key, mouse buttons will not work.</p>
+				<br>
+				<h3>Preview of docs screenshot</h3>
+				<img id="fakedocPreview"src="docs.png" width="550">
+				<br>
+				<button id="ChangeScreenshotfakedoc">Change Screenshot...</button>
+			</div>
+
+		</div>
+
+		<div id="FeatureInBetaError" title="This Feature is in beta.">
+			<p>Unfortunatly, this feature has not been developed yet. This feature is still in beta and will not be accessible to the public until this feature is perfected, Check back later!</p>
+		</div>
+		<div id="CloseWithoutSave" title="Close Without Saving?">
+			<p>All of the modifications you made will not be saved on the next reload. Are you sure you want to close without saving?</p>
+		</div>
+
+		</div>
+
+		<div id="preload_assets">
+			<img src="modsbutton.png">
+			<img src="modsbutton2.png">
+			<img src="Mojang-logo.jpg">
+		</div>
+		
+
+
+	</div>
+	
+	
+
+</body>
+</html>
