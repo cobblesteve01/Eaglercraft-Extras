@@ -32,7 +32,7 @@ Here are some things about me:
 - yea :D
 
 
-### Hey there! I'm SyntaxError52.
+### Hey there! I'm Bahabryra.
 
 Here are some things about me:
 - Knows HTML, CSS, and Scratch
