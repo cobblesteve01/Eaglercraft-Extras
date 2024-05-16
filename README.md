@@ -30,3 +30,12 @@ Here are some things about me:
 - Learning JavaScript
 - Barely knows JavaScript
 - yea :D
+
+
+### Hey there! I'm SyntaxError52.
+
+Here are some things about me:
+- Knows HTML, CSS, and Scratch
+- Learning Python and JavaScript
+- Barely knows Python and Javascript
+- yea :D
