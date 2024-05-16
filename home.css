@@ -41,6 +41,12 @@ body {
    margin: 5px;
 }
 
+.clientButton {
+    height: 200px; 
+    cursor: unset; 
+    margin: 15px;
+}
+
 button:hover {
     background-color: rgba(116, 116, 116, 0.671);
     scale: 105%;
