@@ -1,0 +1,141 @@
+body {
+  margin: 0;
+  font-family: Inter;
+  background-color: #121212;
+}
+
+header {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1F1F1F;
+  -webkit-box-shadow: 1px 7px 5px -3px rgba(0, 0, 0, 0.35);
+          box-shadow: 1px 7px 5px -3px rgba(0, 0, 0, 0.35);
+}
+
+header img {
+  margin: 8px 8px 8px 24px;
+}
+
+header h1 {
+  margin: 8px 24px 8px 0px;
+  font-size: 20px;
+  color: #fff;
+}
+
+header a {
+  margin: 8px 4px 8px 4px;
+  padding: 12px 18px 12px 18px;
+  border-radius: 4px;
+  font-size: 16px;
+  color: #fff;
+  text-decoration: none;
+}
+
+header a:hover {
+  background-color: #2D2D2D;
+}
+
+header a:active {
+  background-color: #363636;
+}
+
+section {
+  max-width: 1280px;
+  margin: 6px auto 6px auto;
+  color: #fff;
+}
+
+section h2 {
+  font-size: 36px;
+  margin: 32px 0px 0px 0px;
+}
+
+table {
+  width: 100%;
+  text-align: left;
+}
+
+table img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+}
+
+table img#h {
+  width: 18px;
+}
+
+table th {
+  background-color: #242424;
+  font-weight: bold;
+  padding: 12px;
+}
+
+table td {
+  background-color: #1D1D1D;
+  padding: 12px;
+}
+
+ul li {
+  list-style-type: square;
+}
+
+ul li img {
+  display: inline-block;
+  vertical-align: middle;
+  width: 32px;
+}
+
+#madebythundiverter {
+  width: 100%;
+  margin-top: 32px;
+  padding: 12px 0px 12px 0px;
+  background-color: #1F4E79;
+  color: #fff;
+  font-size: 90%;
+  text-align: center;
+}
+
+#madebythundiverter a {
+  color: #fff;
+  text-decoration: none;
+}
+
+#madebythundiverter a:hover {
+  text-decoration: underline;
+}
+
+/* SCROLLBAR */
+::-webkit-scrollbar {
+  width: 16px;
+}
+
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #212121;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #242424;
+}
+
+::-webkit-scrollbar-thumb:active {
+  background: #2C2C2C;
+}
+/*# sourceMappingURL=style.css.map */
