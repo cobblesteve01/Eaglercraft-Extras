@@ -1,11 +1,3 @@
-# Security Policy
-
-| Version | Supported          |
-| ------- | ------------------ |
-| 1.2.0   | :white_check_mark: |
-| 1.1.0   | :white_check_mark: |
-| 1.0.0   | :x:                |
-
 ## Some clients aren't safe!
 
 Use these at your own risk. Some problems are glitching screens, keybinds changing, etc.
