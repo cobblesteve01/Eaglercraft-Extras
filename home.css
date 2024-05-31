@@ -1,16 +1,16 @@
 @font-face {
     font-family: inter-bold;
-    src: url(assets/Inter-Bold.ttf);
+    src: url(Inter-Bold.ttf);
 }
 
 @font-face {
     font-family: inter-semibold;
-    src: url(assets/Inter-SemiBold.ttf);
+    src: url(Inter-SemiBold.ttf);
 }
 
 @font-face {
     font-family: inter-medium;
-    src: url(assets/Inter-Medium.ttf);
+    src: url(Inter-Medium.ttf);
 }
 
 h1 {
@@ -39,12 +39,6 @@ body {
    cursor: pointer;
    transition: 0.3s;
    margin: 5px;
-}
-
-.clientButton {
-    height: 200px; 
-    cursor: unset; 
-    margin: 15px;
 }
 
 button:hover {
@@ -174,4 +168,50 @@ ul {
   
     /* Support for IE. */
     font-feature-settings: 'liga';
+}
+
+.status {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: rgb(58, 58, 58);
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+.online {
+    color: lime
+}
+
+.offline {
+    color: red;
+}
+
+.unknown {
+    color: goldenrod;
+}
+
+.ip {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    background-color: dodgerblue;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.copyLink {
+    text-decoration: none;
+    color: white;
+    background-color: dodgerblue;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
 }
