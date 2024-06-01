@@ -1,16 +1,16 @@
 @font-face {
     font-family: inter-bold;
-    src: url(Inter-Bold.ttf);
+    src: url(assets/Inter-Bold.ttf);
 }
 
 @font-face {
     font-family: inter-semibold;
-    src: url(Inter-SemiBold.ttf);
+    src: url(assets/Inter-SemiBold.ttf);
 }
 
 @font-face {
     font-family: inter-medium;
-    src: url(Inter-Medium.ttf);
+    src: url(assets/Inter-Medium.ttf);
 }
 
 h1 {
