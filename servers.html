@@ -20,65 +20,143 @@
         <li style="float: right;"><a href="https://github.com/cobblesteve01/Eaglercraft-Extras" target="_blank"><img src="assets/github.png" style="height: 25px; color: white;" alt=""></a></li>
     </ul>
 
-<div class="button-container">
-    <a href="#" class="copyLink" data-link="wss://3b8d44b5-dbfb-4cf9-b4da-03d056d9f632-00-6rwn7z7ag2xt.picard.replit.dev">Copy IP</a>
-    <a href="#" class="copyLink" data-link="wss://super-chainsaw-r44rpp5j6x9w35r6p-8081.app.github.dev/">Copy IP</a>
-</div>
-
-<script>
-    // Function to copy text to clipboard
-    function copyToClipboard(text) {
-        const tempInput = document.createElement('input');
-        tempInput.value = text;
-        document.body.appendChild(tempInput);
-        tempInput.select();
-        tempInput.setSelectionRange(0, 99999); // For mobile devices
-        document.execCommand('copy');
-        document.body.removeChild(tempInput);
-        alert('IP Copied!');
-    }
-
-    // Add event listeners to all links with class "copyLink"
-    document.querySelectorAll('.copyLink').forEach(link => {
-        link.addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent the default action of the <a> element
-            const link = this.getAttribute('data-link');
-            copyToClipboard(link);
-        });
-    });
-</script>
-
-</body>
-</html>
-
-
-    <h1 align="center" style="font-size: 54px; margin-bottom: -10px; text-decoration: none">Servers</h1>
+    <h1 align="center" style="font-size: 54px; margin-bottom: -10px; text-decoration: none">1.8 Servers</h1>
     <p align="center">Have fun! Statuses updated weekly.</p>
 
     <br><br>
 
-    <div class="container">
-        <button class="button" style="height: 250px;">
-            <h1 style="margin-bottom: 20px; margin-top: 5px; font-size: 30px;">Play SMP</h1>
-            <a class="status">Status: <span class="online">Online</span></a>
-            <br><br>
-            <!-- Link with copy functionality -->
-            <a href="" onclick="copyToClipboard()" class="copyLink" data-link="wss://3b8d44b5-dbfb-4cf9-b4da-03d056d9f632-00-6rwn7z7ag2xt.picard.replit.dev"><span class="material-icons-round" style="scale: 110%;">
-                content_copy
-                </span>&nbsp;Copy IP</a>
-        </button>
+    <div class="button-container">
+        <div class="container">
+            <button class="button" style="height: 275px; margin-left: 10px; margin-right: 10px;">
+                <h1 style="margin-bottom: -7px; margin-top: 5px; font-size: 30px;">Play SMP</h1>
+                <p style="font-size: 17px;">Survival, Skywars, Duels</p>
+                    <a class="status">Status: <span class="online">Online</span></a>
+                    <br><br>
+                    <a class="copyLink" data-link="wss://3b8d44b5-dbfb-4cf9-b4da-03d056d9f632-00-6rwn7z7ag2xt.picard.replit.dev"><span class="material-icons-round" style="vertical-align: -3px; scale: 110%;">
+                        content_copy
+                        </span>&nbsp;Copy IP</a>
+            </button>
 
-        <button class="button" style="height: 250px;">
-            <h1 style="margin-bottom: 20px; margin-top: 5px; font-size: 30px;">Play SMP</h1>
-            <a class="status">Status: <span class="online">Online</span></a>
-            <br><br>
-            <!-- Link with copy functionality -->
-            <a href="" onclick="copyToClipboard()" class="copyLink" data-link="wss://3b8d44b5-dbfb-4cf9-b4da-03d056d9f632-00-6rwn7z7ag2xt.picard.replit.dev"><span class="material-icons-round" style="scale: 110%;">
-                content_copy
-                </span>&nbsp;Copy IP</a>
-        </button>
+            <button class="button" style="height: 275px; margin-left: 10px; margin-right: 10px;">
+                <h1 style="margin-bottom: -7px; margin-top: 5px; font-size: 30px;">Zentic</h1>
+                <p style="font-size: 17px;">Practice, Skywars, Bedwars</p>
+                    <a class="status">Status: <span class="online">Online</span></a>
+                    <br><br>
+                    <a class="copyLink" data-link="wss://zentic.cc"><span class="material-icons-round" style="vertical-align: -3px; scale: 110%;">
+                        content_copy
+                        </span>&nbsp;Copy IP</a>
+            </button>
+
+            <button class="button" style="height: 275px; margin-left: 10px; margin-right: 10px;">
+                <h1 style="margin-bottom: -7px; margin-top: 5px; font-size: 30px;">ArchMC</h1>
+                <p style="font-size: 17px;">Survival, Bedwars, KitPVP</p>
+                    <a class="status">Status: <span class="online">Online</span></a>
+                    <br><br>
+                    <a class="copyLink" data-link="wss://mc.arch.lol"><span class="material-icons-round" style="vertical-align: -3px; scale: 110%;">
+                        content_copy
+                        </span>&nbsp;Copy IP</a>
+            </button>
+
+            <button class="button" style="height: 275px; margin-left: 10px; margin-right: 10px;">
+                <h1 style="margin-bottom: -7px; margin-top: 5px; font-size: 30px;">Aeon Network</h1>
+                <p style="font-size: 17px;">Survival, Pitfall, Practice</p>
+                    <a class="status">Status: <span class="online">Online</span></a>
+                    <br><br>
+                    <a class="copyLink" data-link="wss://aeon-network.net/1.8"><span class="material-icons-round" style="vertical-align: -3px; scale: 110%;">
+                        content_copy
+                        </span>&nbsp;Copy IP</a>
+            </button>
+        </div>
     </div>
-    
+
+    <div class="button-container">
+        <div class="container">
+            <button class="button" style="height: 275px; margin-left: 10px; margin-right: 10px;">
+                <h1 style="margin-bottom: -7px; margin-top: 5px; font-size: 30px;">LegendSMP</h1>
+                <p style="font-size: 17px;">Survival</p>
+                    <a class="status">Status: <span class="offline">Offline</span></a>
+                    <br><br>
+                    <a class="copyLink" data-link="wss://legxndsmp.minecraft.pe"><span class="material-icons-round" style="vertical-align: -3px; scale: 110%;">
+                        content_copy
+                        </span>&nbsp;Copy IP</a>
+            </button>
+
+            <button class="button" style="height: 275px; margin-left: 10px; margin-right: 10px;">
+                <h1 style="margin-bottom: -7px; margin-top: 5px; font-size: 30px;">Helltech</h1>
+                <p style="font-size: 17px;">GGsmp, LostSMP, Chess</p>
+                    <a class="status">Status: <span class="offline">Offline</span></a>
+                    <br><br>
+                    <a class="copyLink" data-link="wss://ggsmp.net/"><span class="material-icons-round" style="vertical-align: -3px; scale: 110%;">
+                        content_copy
+                        </span>&nbsp;Copy IP</a>
+            </button>
+
+            <button class="button" style="height: 275px; margin-left: 10px; margin-right: 10px;">
+                <h1 style="margin-bottom: -7px; margin-top: 5px; font-size: 30px;">Clever</h1>
+                <p style="font-size: 17px;">Survival, Skyblock, Minigames, and more</p>
+                    <a class="status">Status: <span class="online">Online</span></a>
+                    <br><br>
+                    <a class="copyLink" data-link="wss://clever-teaching.com/web/"><span class="material-icons-round" style="vertical-align: -3px; scale: 110%;">
+                        content_copy
+                        </span>&nbsp;Copy IP</a>
+            </button>
+
+            <button class="button" style="height: 275px; margin-left: 10px; margin-right: 10px;">
+                <h1 style="margin-bottom: -7px; margin-top: 5px; font-size: 30px;">Rice Network</h1>
+                <p style="font-size: 17px;">Crystal PVP, Duels, Survival, Minigames</p>
+                    <a class="status">Status: <span class="offline">Offline</span></a>
+                    <br><br>
+                    <a class="copyLink" data-link="wss://ricenetwork.neutine.net/"><span class="material-icons-round" style="vertical-align: -3px; scale: 110%;">
+                        content_copy
+                        </span>&nbsp;Copy IP</a>
+            </button>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <div class="container">
+            <button class="button" style="height: 275px; margin-left: 10px; margin-right: 10px;">
+                <h1 style="margin-bottom: -7px; margin-top: 5px; font-size: 30px;">Asian SMP</h1>
+                <p style="font-size: 17px;">Survival</p>
+                    <a class="status">Status: <span class="online">Online</span></a>
+                    <br><br>
+                    <a class="copyLink" data-link="wss://asianf4rmer.minecraft.pe"><span class="material-icons-round" style="vertical-align: -3px; scale: 110%;">
+                        content_copy
+                        </span>&nbsp;Copy IP</a>
+            </button>
+
+            <button class="button" style="height: 275px; margin-left: 10px; margin-right: 10px;">
+                <h1 style="margin-bottom: -7px; margin-top: 5px; font-size: 30px;">Verise</h1>
+                <p style="font-size: 17px;">Anarchy</p>
+                    <a class="status">Status: <span class="offline">Offline</span></a>
+                    <br><br>
+                    <a class="copyLink" data-link="wss://verise.repl.co/"><span class="material-icons-round" style="vertical-align: -3px; scale: 110%;">
+                        content_copy
+                        </span>&nbsp;Copy IP</a>
+            </button>
+
+            <button class="button" style="height: 275px; margin-left: 10px; margin-right: 10px;">
+                <h1 style="margin-bottom: -7px; margin-top: 5px; font-size: 30px;">PVP Club</h1>
+                <p style="font-size: 17px;">Survival, PVP, Crystal FFA</p>
+                    <a class="status">Status: <span class="offline">Offline</span></a>
+                    <br><br>
+                    <a class="copyLink" data-link="wss://play.pvpclub.xyz"><span class="material-icons-round" style="vertical-align: -3px; scale: 110%;">
+                        content_copy
+                        </span>&nbsp;Copy IP</a>
+            </button>
+
+            <button class="button" style="height: 275px; margin-left: 10px; margin-right: 10px;">
+                <h1 style="margin-bottom: -7px; margin-top: 5px; font-size: 30px;">Rosalia</h1>
+                <p style="font-size: 17px;">Survival, Slime Fun</p>
+                    <a class="status">Status: <span class="unknown">Unknown</span></a>
+                    <br><br>
+                    <a class="copyLink" data-link="wss://intelle.cloud/soccer"><span class="material-icons-round" style="vertical-align: -3px; scale: 110%;">
+                        content_copy
+                        </span>&nbsp;Copy IP</a>
+            </button>
+        </div>
+    </div>
+
     <script>
         // Function to copy text to clipboard
         function copyToClipboard(text) {
@@ -89,14 +167,16 @@
             tempInput.setSelectionRange(0, 99999); // For mobile devices
             document.execCommand('copy');
             document.body.removeChild(tempInput);
-            window.alert('IP copied to clipboard!');
+            alert('IP Copied!');
         }
     
-        // Add event listener to the link with class "copyLink"
-        document.querySelector('.copyLink').addEventListener('click', function(event) {
-            event.preventDefault(); // Prevent the default action of the <a> element
-            const link = this.getAttribute('data-link');
-            copyToClipboard(link);
+        // Add event listeners to all links with class "copyLink"
+        document.querySelectorAll('.copyLink').forEach(link => {
+            link.addEventListener('click', function(event) {
+                event.preventDefault(); // Prevent the default action of the <a> element
+                const link = this.getAttribute('data-link');
+                copyToClipboard(link);
+            });
         });
     </script>
 
