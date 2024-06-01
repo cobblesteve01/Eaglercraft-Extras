@@ -84,6 +84,7 @@ button:hover {
 li {
     display: inline;
     float: left;
+    font-family: inter-medium;
 }
 
 li a {
@@ -112,6 +113,7 @@ ul {
     overflow: hidden;
     border-radius: 10px;
     padding-top: 5px;
+    font-family: inter-medium;
 }
 
 .active {
