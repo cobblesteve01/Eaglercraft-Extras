@@ -217,3 +217,13 @@ ul {
     transition: background-color 0.3s ease;
     border-radius: 10px;
 }
+
+.status.online span {
+    color: green;
+}
+.status.offline span {
+    color: red;
+}
+.status.unknown span {
+    color: orange;
+}
