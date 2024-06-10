@@ -8,7 +8,7 @@ I recommend looking through some of the features below!
 - Search for servers to play with other people!
 - Download resource packs to customize your Eaglercraft!
 - Look at a <b>giant</b> selection of clients to play on!
-- Download skins for Eaglercraft!
+- See our built-in Quick Guide made by Thundiverter!
 - We have 1.3, 1.5, and 1.8 clients for Eaglercraft!
 - The best part? It's 100% <u>free!</u>
 
@@ -42,3 +42,5 @@ Here are some things about me:
 - Learning Python and JavaScript
 - Barely knows Python and Javascript
 - yea :D
+
+### Thanks to Thundiverter for making the MC Quick Guide!
