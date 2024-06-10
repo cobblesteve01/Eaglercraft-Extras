@@ -1,7 +1,7 @@
 # Welcome to Eaglercraft Extras!
 This is a website similar to EaglerCrack (if you know it) where you can find all things related to Eaglercraft!
 There are currently 3 developers, and I am trying to update this as much as possible for it to be the best it can be.
-I recomment looking through some of the features below!
+I recommend looking through some of the features below!
 
 ## Features
 - Find pre-built worlds to download and play!
