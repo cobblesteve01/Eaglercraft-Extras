@@ -9,6 +9,7 @@ I recommend looking through some of the features below!
 - Download resource packs to customize your Eaglercraft!
 - Look at a <b>giant</b> selection of clients to play on!
 - See our built-in Quick Guide made by Thundiverter!
+- Download skins for your Eaglercraft character!
 - We have 1.3, 1.5, and 1.8 clients for Eaglercraft!
 - The best part? It's 100% <u>free!</u>
 

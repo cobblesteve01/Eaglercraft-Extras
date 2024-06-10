@@ -227,3 +227,39 @@ ul {
 .status.unknown span {
     color: orange;
 }
+
+.skin-button {
+    text-align: center;
+    border-radius: 25px;
+    height: 375px;
+    width: 300px;
+    font-size: 30px;
+    font-family: inter-semibold;
+    color: white;
+    background-color: rgb(29, 29, 29);
+    border-color: white;
+    border-width: 0.5px;
+    box-shadow: none;
+    outline: none;
+    border-style: solid;
+    cursor: pointer;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.skin {
+    height: 150px;
+    margin-top: 15px;
+    margin: 10px;
+}
+
+.download {
+    text-decoration: none;
+    color: white;
+    border-radius: 12.5px;
+    background-color: dodgerblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
