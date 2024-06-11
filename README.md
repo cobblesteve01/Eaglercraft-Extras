@@ -23,7 +23,7 @@ About Me:
 - Knows HTML and CSS
 - Learning JavaScript and Python
 - Barely knows Python
-- Has a YouTube channel »→ https://youtube.com/@cobblesteve.official
+- Has a YouTube channel --> https://youtube.com/@cobblesteve.official
 - Likes to play Minecraft, Geometry Dash, A Dance of Fire and Ice (ADOFAI), and more!
 - yea :D
 
