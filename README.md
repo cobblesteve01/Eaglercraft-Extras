@@ -1,5 +1,5 @@
 # Welcome to Eaglercraft Extras!
-This is a website similar to EaglerCrack (if you know it) where you can find all things related to Eaglercraft!
+This is a website similar to Eaglercrack (if you know it) where you can find all things related to Eaglercraft!
 There are currently 3 developers, and I am trying to update this as much as possible for it to be the best it can be.
 I recommend looking through some of the features below!
 
@@ -16,14 +16,14 @@ I recommend looking through some of the features below!
 ## Meet the Developers
 
 ### Hey there! I'm cobblesteve.
-I started this project in April, and I wanted it to become the alternative for EaglerCrack.
-I'm making it for a website I have right now, which currently uses EaglerCrack as a source.
+I started this project in April, and I wanted it to become the alternative for Eaglercrack.
+I'm making it for a website I have right now, which currently uses Eaglercrack as a source.
 
 About Me:
 - Knows HTML and CSS
 - Learning JavaScript and Python
 - Barely knows Python
-- Has a YouTube channel ⟫ https://youtube.com/@cobblesteve.official
+- Has a YouTube channel --> https://youtube.com/@cobblesteve.official
 - Likes to play Minecraft, Geometry Dash, A Dance of Fire and Ice (ADOFAI), and more!
 - yea :D
 
@@ -33,7 +33,6 @@ Here are some things about me:
 - Knows HTML, CSS, and Python
 - Learning JavaScript
 - Barely knows JavaScript
-- yea :D
 
 
 ### Hey there! I'm Bahabryra.
@@ -42,6 +41,5 @@ Here are some things about me:
 - Knows HTML, CSS, and Scratch
 - Learning Python and JavaScript
 - Barely knows Python and Javascript
-- yea :D
 
 ### Thanks to Thundiverter for making the MC Quick Guide!
