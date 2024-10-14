@@ -114,6 +114,9 @@ ul {
     border-radius: 10px;
     padding-top: 5px;
     font-family: inter-medium;
+    position: sticky;
+    top: 1rem;
+    z-index: 9999;
 }
 
 .active {
