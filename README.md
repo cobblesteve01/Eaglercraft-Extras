@@ -34,12 +34,11 @@ Here are some things about me:
 - Learning JavaScript
 - Barely knows JavaScript
 
-
-### Hey there! I'm Bahabryra.
-
-Here are some things about me:
-- Knows HTML, CSS, and Scratch
-- Learning Python and JavaScript
-- Barely knows Python and Javascript
+### Hey there! I'm SprintingSnail69
+- Knows HTML, CSS, and a little JavaScript
+- Learning more JavaScript
+- Has a YouTube channel --> https://youtube.com/@SprintingSnail123
+- Insane at Brawl Stars
+- yea :(
 
 ### Thanks to Thundiverter for making the MC Quick Guide!
