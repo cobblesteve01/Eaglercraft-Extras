@@ -245,7 +245,9 @@
                         content_copy
                         </span>&nbsp;Copy IP</a>
             </button>
+        </div>
 
+         <div class="button-container">
             <button class="button" style="height: 275px; margin-left: 10px; margin-right: 10px;" data-server="mcus1.dxomg.link">
                 <h1 style="margin-bottom: -7px; margin-top: 5px; font-size: 30px;">Dxomg Proxy</h1>
                 <p style="font-size: 17px;">Proxy for cracked Java servers</p>
@@ -293,22 +295,20 @@
     </div>
 
     <script>
-        // Function to copy text to clipboard
         function copyToClipboard(text) {
             const tempInput = document.createElement('input');
             tempInput.value = text;
             document.body.appendChild(tempInput);
             tempInput.select();
-            tempInput.setSelectionRange(0, 99999); // For mobile devices
+            tempInput.setSelectionRange(0, 99999);
             document.execCommand('copy');
             document.body.removeChild(tempInput);
             alert('IP Copied!');
         }
-    
-        // Add event listeners to all links with class "copyLink"
+
         document.querySelectorAll('.copyLink').forEach(link => {
             link.addEventListener('click', function(event) {
-                event.preventDefault(); // Prevent the default action of the <a> element
+                event.preventDefault();
                 const link = this.getAttribute('data-link');
                 copyToClipboard(link);
             });
@@ -316,13 +316,10 @@
     </script>
 
     <script>
-        // Function to update server status
         function updateServerStatus(serverAddress, statusElement) {
-            // Make a request to the mcstatus.io API
             fetch(`https://api.mcstatus.io/v2/status/java/${serverAddress}`)
             .then(response => response.json())
             .then(data => {
-                // Check if the server is online
                 if (data.online) {
                     statusElement.innerHTML = `Status: <span class="online">Online</span>`;
                 } else {
@@ -334,19 +331,15 @@
                 statusElement.innerHTML = `Status: <span class="unknown">Unknown</span>`;
             });
         }
-    
-        // Get all buttons with class 'button'
+
         const buttons = document.querySelectorAll('.button');
-    
-        // Loop through each button and attach event listener
+
         buttons.forEach(button => {
             const serverAddress = button.dataset.server;
             const statusElement = button.querySelector('.status');
-            // Update status on button click
             button.addEventListener('click', () => {
                 updateServerStatus(serverAddress, statusElement);
             });
-            // Initial status check
             updateServerStatus(serverAddress, statusElement);
         });
     </script>
