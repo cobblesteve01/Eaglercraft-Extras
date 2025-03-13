@@ -1,8 +1,5 @@
 # Welcome to Eaglercraft Extras!
-This is a website similar to Eaglercrack (if you know it) where you can find all things related to Eaglercraft!
-There are currently 3 developers, and I am trying to update this as much as possible for it to be the best it can be.
-I recommend looking through some of the features below!
-
+The best addons website for Eaglercraft. Constantly updated to bring you the latest versions of Eagler, and providing you with other clients, texture packs, and more'
 ## Features
 - Find pre-built worlds to download and play!
 - Search for servers to play with other people!
@@ -23,7 +20,7 @@ About Me:
 - Knows HTML and CSS
 - Learning JavaScript and Python
 - Barely knows Python
-- Has a YouTube channel --> https://youtube.com/@cobblesteve.official
+- Has a YouTube channel --> https://youtube.com/@yk4ndrew
 - Likes to play Minecraft, Geometry Dash, A Dance of Fire and Ice (ADOFAI), and more!
 - yea :D
 
