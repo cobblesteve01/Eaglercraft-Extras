@@ -1,5 +1,5 @@
 # Welcome to Eaglercraft Extras!
-The best addons website for Eaglercraft. Constantly updated to bring you the latest versions of Eagler, and providing you with other clients, texture packs, and more'
+The best addons website for Eaglercraft. Constantly updated to bring you the latest versions of Eagler, and providing you with other clients, texture packs, and more!
 ## Features
 - Find pre-built worlds to download and play!
 - Search for servers to play with other people!
